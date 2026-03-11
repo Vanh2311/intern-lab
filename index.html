@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>DevOps </title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .box {
+            background: #1e293b;
+            padding: 30px;
+            width: 400px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        .status {
+            color: #22c55e;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1></h1> DevOps Practice Page</h1>
+
+    <p>Version: <span id="version">1.0.0</span></p>
+
+    <p>Status: <span class="status">Running</span></p>
+
+    <p id="time"></p>
+</div>
+
+<script>
+    function updateTime() {
+        const now = new Date();
+        document.getElementById("time").innerText =
+            "Server Time: " + now.toLocaleString();
+    }
+
+    updateTime();
+    setInterval(updateTime, 1000);
+</script>
+
+</body>
+</html>
